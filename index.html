@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selda Erdoğan Mali Müşavirlik</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-rates" id="topbar-rates">
+        <span class="rate-item"><span class="rate-label">$ Dolar</span><span class="rate-val" id="usd-val">—</span></span>
+        <span class="rate-divider">|</span>
+        <span class="rate-item"><span class="rate-label">€ Euro</span><span class="rate-val" id="eur-val">—</span></span>
+        <span class="rate-divider">|</span>
+        <span class="rate-item"><span class="rate-label">£ Sterlin</span><span class="rate-val" id="gbp-val">—</span></span>
+      </div>
+      <div class="topbar-ticker">
+        <span class="ticker-label">Duyuru:</span>
+        <div class="ticker-wrap">
+          <span class="ticker-text" id="ticker-text">Haberler yükleniyor...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#anasayfa" class="logo">
+        <img src="logo.png" alt="Selda Erdoğan Mali Müşavirlik Logo" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-name">Selda Erdoğan</span>
+          <span class="logo-sub">Mali Müşavirlik</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#anasayfa">Anasayfa</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li class="has-dropdown">
+            <a href="#hizmetler">Hizmetler <span class="arrow">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="hizmetler/muhasebe.html">Muhasebe & Defter Tutma</a></li>
+              <li><a href="hizmetler/vergi.html">Vergi Danışmanlığı</a></li>
+              <li><a href="hizmetler/sgk.html">SGK & Bordro İşlemleri</a></li>
+              <li><a href="hizmetler/sirket.html">Şirket Kuruluşu</a></li>
+              <li><a href="hizmetler/analiz.html">Mali Analiz & Raporlama</a></li>
+              <li><a href="hizmetler/efatura.html">E-Fatura & E-Defter</a></li>
+            </ul>
+          </li>
+          <li><a href="#neden-biz">Neden Biz</a></li>
+          <li><a href="#" class="nav-cta" onclick="event.preventDefault();document.getElementById('contact-popup').classList.add('active')">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="anasayfa">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-badge">Güvenilir Mali Danışmanlık</p>
+      <h1>İşinizi Büyütün,<br/>Mali İşleri Bize Bırakın</h1>
+      <p class="hero-desc">
+        Vergi, muhasebe ve SGK süreçlerinizi uzman ellere teslim edin.
+        İşinize odaklanın, gerisini biz halledelim.
+      </p>
+      <div class="hero-btns">
+        <a href="#hizmetler" class="btn btn-primary">Hizmetlerimiz</a>
+        <a href="#iletisim" class="btn btn-outline">Bize Ulaşın</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">15+</span>
+        <span class="stat-label">Yıl Deneyim</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">200+</span>
+        <span class="stat-label">Mutlu Müşteri</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">%100</span>
+        <span class="stat-label">Zamanında Teslimat</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">7/24</span>
+        <span class="stat-label">Destek</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAKKIMIZDA -->
+  <section class="about section" id="hakkimizda">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-illus">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 340" fill="none">
+
+            <!-- Arka plan daire -->
+            <circle cx="190" cy="170" r="155" fill="#eaf1f8"/>
+
+            <!-- Masa -->
+            <rect x="60" y="230" width="260" height="14" rx="7" fill="#1a3a5c" opacity=".12"/>
+            <rect x="75" y="188" width="230" height="48" rx="8" fill="#d0dce8"/>
+            <rect x="85" y="194" width="210" height="36" rx="6" fill="#b8cce0"/>
+
+            <!-- Laptop gövde -->
+            <rect x="105" y="108" width="170" height="108" rx="8" fill="#1a3a5c"/>
+            <rect x="113" y="116" width="154" height="92" rx="5" fill="#213f5e"/>
+
+            <!-- Ekran içi grafik -->
+            <rect x="120" y="122" width="140" height="80" rx="4" fill="#162d45"/>
+            <!-- Bar chart -->
+            <rect x="132" y="168" width="14" height="26" rx="2" fill="#f0a500" opacity=".8"/>
+            <rect x="152" y="157" width="14" height="37" rx="2" fill="#f0a500"/>
+            <rect x="172" y="148" width="14" height="46" rx="2" fill="#4a9eda"/>
+            <rect x="192" y="161" width="14" height="33" rx="2" fill="#f0a500" opacity=".7"/>
+            <rect x="212" y="143" width="14" height="51" rx="2" fill="#4a9eda" opacity=".9"/>
+            <rect x="232" y="153" width="14" height="41" rx="2" fill="#f0a500"/>
+            <!-- Çizgi grafik -->
+            <polyline points="132,162 152,150 172,140 192,154 212,135 232,145 248,138" stroke="#7ecfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- Başlık metni ekran -->
+            <rect x="128" y="126" width="50" height="5" rx="2.5" fill="#f0a500" opacity=".7"/>
+            <rect x="184" y="126" width="30" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+
+            <!-- Klavye -->
+            <rect x="108" y="218" width="164" height="8" rx="3" fill="#a8bdd0"/>
+            <rect x="118" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="130" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="142" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="154" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="166" y="221" width="20" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="190" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="202" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="214" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="226" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="240" y="221" width="8" height="3" rx="1" fill="#8aafc7"/>
+            <rect x="130" y="226" width="120" height="3" rx="1" fill="#8aafc7"/>
+
+            <!-- Sol belge / dosya -->
+            <rect x="55" y="128" width="58" height="76" rx="6" fill="#fff" filter="url(#shadow1)"/>
+            <rect x="55" y="128" width="58" height="76" rx="6" fill="#fff"/>
+            <rect x="55" y="128" width="58" height="76" rx="6" stroke="#dde6f0" stroke-width="1.5"/>
+            <rect x="63" y="140" width="22" height="4" rx="2" fill="#f0a500"/>
+            <rect x="63" y="150" width="40" height="3" rx="1.5" fill="#1a3a5c" opacity=".25"/>
+            <rect x="63" y="157" width="35" height="3" rx="1.5" fill="#1a3a5c" opacity=".2"/>
+            <rect x="63" y="164" width="38" height="3" rx="1.5" fill="#1a3a5c" opacity=".2"/>
+            <rect x="63" y="171" width="30" height="3" rx="1.5" fill="#1a3a5c" opacity=".2"/>
+            <!-- Küçük grafik belge içi -->
+            <polyline points="63,191 71,184 79,187 87,179 95,182 103,176" stroke="#4a9eda" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+            <!-- Sağ hesap makinesi -->
+            <rect x="267" y="130" width="56" height="82" rx="7" fill="#1a3a5c"/>
+            <rect x="273" y="138" width="44" height="20" rx="4" fill="#213f5e"/>
+            <text x="295" y="153" text-anchor="middle" font-size="11" font-weight="700" fill="#f0a500" font-family="Arial">₺ 0</text>
+            <!-- Tuşlar -->
+            <rect x="274" y="164" width="10" height="9" rx="2" fill="#2d5070"/>
+            <rect x="289" y="164" width="10" height="9" rx="2" fill="#2d5070"/>
+            <rect x="304" y="164" width="10" height="9" rx="2" fill="#f0a500"/>
+            <rect x="274" y="177" width="10" height="9" rx="2" fill="#2d5070"/>
+            <rect x="289" y="177" width="10" height="9" rx="2" fill="#2d5070"/>
+            <rect x="304" y="177" width="10" height="9" rx="2" fill="#2d5070"/>
+            <rect x="274" y="190" width="10" height="9" rx="2" fill="#2d5070"/>
+            <rect x="289" y="190" width="10" height="9" rx="2" fill="#2d5070"/>
+            <rect x="304" y="190" width="10" height="9" rx="2" fill="#f0a500"/>
+            <rect x="274" y="203" width="25" height="9" rx="2" fill="#4a9eda"/>
+            <rect x="304" y="203" width="10" height="9" rx="2" fill="#f0a500"/>
+
+            <!-- Para sembolleri floating -->
+            <circle cx="80" cy="100" r="18" fill="#f0a500"/>
+            <text x="80" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" font-family="Arial">₺</text>
+
+            <circle cx="305" cy="102" r="13" fill="#1a3a5c" opacity=".85"/>
+            <text x="305" y="107" text-anchor="middle" font-size="11" font-weight="700" fill="#f0a500" font-family="Arial">$</text>
+
+            <circle cx="330" cy="240" r="10" fill="#4a9eda" opacity=".8"/>
+            <text x="330" y="244" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" font-family="Arial">€</text>
+
+            <!-- Onay işareti rozet -->
+            <circle cx="108" cy="96" r="14" fill="#22c55e"/>
+            <polyline points="102,96 107,102 115,89" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+            <defs>
+              <filter id="shadow1" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1a3a5c" flood-opacity=".1"/>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">Hakkımızda</p>
+        <h2>Profesyonel Mali Danışmanlık Hizmetleri</h2>
+        <p>
+          Selda Erdoğan Mali Müşavirlik olarak, 15 yılı aşkın deneyimimizle işletmelerin
+          ve bireylerin mali süreçlerini en doğru şekilde yönetmelerine yardımcı oluyoruz.
+        </p>
+        <p>
+          Sertifikalı ve deneyimli mali müşavirlerimizle; muhasebe,
+          vergi danışmanlığı, SGK işlemleri ve şirket kuruluşu konularında kapsamlı
+          ve güvenilir hizmet sunuyoruz.
+        </p>
+        <ul class="about-list">
+          <li>
+            <span class="check">✓</span>
+            Sertifikalı ve deneyimli uzman kadro
+          </li>
+          <li>
+            <span class="check">✓</span>
+            Zamanında ve doğru beyan garantisi
+          </li>
+          <li>
+            <span class="check">✓</span>
+            Her ölçekteki işletmeye özel çözümler
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HİZMETLER -->
+  <section class="services section bg-light" id="hizmetler">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Hizmetlerimiz</p>
+        <h2>Neler Yapıyoruz?</h2>
+        <p class="section-desc">İşletmenizin ihtiyaç duyduğu tüm mali hizmetleri tek çatı altında sunuyoruz.</p>
+      </div>
+
+      <div class="services-grid">
+        <a href="hizmetler/muhasebe.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="6" width="32" height="36" rx="3" fill="#e8f0f8"/>
+              <rect x="14" y="14" width="12" height="3" rx="1.5" fill="#1a3a5c"/>
+              <rect x="14" y="20" width="20" height="2.5" rx="1.25" fill="#1a3a5c" opacity=".4"/>
+              <rect x="14" y="25" width="16" height="2.5" rx="1.25" fill="#1a3a5c" opacity=".4"/>
+              <rect x="14" y="30" width="18" height="2.5" rx="1.25" fill="#1a3a5c" opacity=".4"/>
+            </svg>
+          </div>
+          <h3>Muhasebe & Defter Tutma</h3>
+          <p>İşletmenizin tüm muhasebe kayıtlarını, yasal defterlerini ve mali tablolarını eksiksiz tutuyoruz.</p>
+          <span class="card-link">Detaylı Bilgi →</span>
+        </a>
+
+        <a href="hizmetler/vergi.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" fill="#e8f0f8"/>
+              <text x="24" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#1a3a5c" font-family="Arial">%</text>
+            </svg>
+          </div>
+          <h3>Vergi Danışmanlığı</h3>
+          <p>KDV, gelir vergisi, kurumlar vergisi beyannamelerinizi zamanında ve doğru şekilde hazırlıyoruz.</p>
+          <span class="card-link">Detaylı Bilgi →</span>
+        </a>
+
+        <a href="hizmetler/sgk.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="16" width="32" height="22" rx="3" fill="#e8f0f8"/>
+              <circle cx="24" cy="12" r="6" fill="#1a3a5c" opacity=".15"/>
+              <circle cx="24" cy="12" r="3" fill="#1a3a5c"/>
+              <rect x="16" y="24" width="16" height="2.5" rx="1.25" fill="#1a3a5c" opacity=".4"/>
+              <rect x="16" y="29" width="10" height="2.5" rx="1.25" fill="#1a3a5c" opacity=".4"/>
+            </svg>
+          </div>
+          <h3>SGK & Bordro İşlemleri</h3>
+          <p>Çalışanlarınızın SGK bildirgelerini, bordrolarını ve işe giriş/çıkış işlemlerini yönetiyoruz.</p>
+          <span class="card-link">Detaylı Bilgi →</span>
+        </a>
+
+        <a href="hizmetler/sirket.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="14" width="28" height="22" rx="3" fill="#e8f0f8"/>
+              <rect x="18" y="8" width="12" height="10" rx="2" fill="#1a3a5c" opacity=".15"/>
+              <path d="M22 13 L24 11 L26 13" stroke="#1a3a5c" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="17" y="22" width="14" height="2.5" rx="1.25" fill="#1a3a5c" opacity=".4"/>
+              <rect x="17" y="27" width="10" height="2.5" rx="1.25" fill="#1a3a5c" opacity=".4"/>
+            </svg>
+          </div>
+          <h3>Şirket Kuruluşu</h3>
+          <p>Limited, anonim şirket ve şahıs işletmesi kuruluş süreçlerini başından sonuna kadar yürütüyoruz.</p>
+          <span class="card-link">Detaylı Bilgi →</span>
+        </a>
+
+        <a href="hizmetler/analiz.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="8,36 18,24 26,30 38,14" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="38" cy="14" r="4" fill="#f0a500"/>
+            </svg>
+          </div>
+          <h3>Mali Analiz & Raporlama</h3>
+          <p>İşletmenizin finansal durumunu analiz ederek anlaşılır raporlar ve stratejik önerilerde bulunuyoruz.</p>
+          <span class="card-link">Detaylı Bilgi →</span>
+        </a>
+
+        <a href="hizmetler/efatura.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="28" height="28" rx="14" fill="#e8f0f8"/>
+              <path d="M24 18 L24 30 M18 24 L30 24" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>E-Fatura & E-Defter</h3>
+          <p>Dijital dönüşüm sürecinde e-fatura, e-defter ve e-arşiv uygulamalarında destek sağlıyoruz.</p>
+          <span class="card-link">Detaylı Bilgi →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABERLER -->
+  <section class="news section" id="haberler">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Güncel</p>
+        <h2>Mali Müşavirlik Haberleri</h2>
+        <p class="section-desc">Vergi, muhasebe ve mevzuat alanındaki son gelişmeler.</p>
+      </div>
+      <div class="news-grid" id="news-grid">
+        <div class="news-loading">Haberler yükleniyor...</div>
+      </div>
+      <div class="news-source">
+        Kaynak: <a href="https://www.alomaliye.com" target="_blank" rel="noopener">alomaliye.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEDEN BİZ -->
+  <section class="why section" id="neden-biz">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Neden Biz?</p>
+        <h2>Farkımız Ne?</h2>
+        <p class="section-desc">Müşterilerimizin bize güvenmesinin birkaç önemli nedeni var.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-num">01</div>
+          <h3>Güvenilirlik</h3>
+          <p>15 yılı aşkın deneyim ve TÜRMOB üyeliği ile mali işlemlerinizi güvenle yürütüyoruz.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">02</div>
+          <h3>Zamanında Hizmet</h3>
+          <p>Beyanname ve bildirge sürelerini hiç kaçırmadan, cezasız ve eksiksiz teslim garantisi veriyoruz.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">03</div>
+          <h3>Kişisel İlgi</h3>
+          <p>Her müşterimize özel ilgi gösteriyor, işletmenizin büyümesini kendi işimiz gibi takip ediyoruz.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">04</div>
+          <h3>Kolay İletişim</h3>
+          <p>Sorularınıza hızlı yanıt veriyor, her adımda sizi bilgilendiriyoruz. İletişim kapımız her zaman açık.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section class="contact section bg-light" id="iletisim">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">İletişim</p>
+        <h2>Bize Ulaşın</h2>
+        <p class="section-desc">Sorularınız için bizi arayabilir ya da mesaj gönderebilirsiniz.</p>
+      </div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.23h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="#1a3a5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="contact-label">Telefon</span>
+          <span class="contact-value">+90 (5XX) XXX XX XX</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#1a3a5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="22,6 12,13 2,6" stroke="#1a3a5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="contact-label">E-posta</span>
+          <span class="contact-value">info@seldaerdogan.com</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#1a3a5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="3" stroke="#1a3a5c" stroke-width="2"/>
+            </svg>
+          </div>
+          <span class="contact-label">Adres</span>
+          <span class="contact-value">Merkez Mahallesi, Ergün Sk. No:1/27, 34096 Arnavutköy/İstanbul</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="#1a3a5c" stroke-width="2"/>
+              <polyline points="12,6 12,12 16,14" stroke="#1a3a5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="contact-label">Çalışma Saatleri</span>
+          <span class="contact-value">Pzt – Cum: 09:00 – 18:00</span>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <button class="btn btn-primary" onclick="document.getElementById('contact-popup').classList.add('active')">Mesaj Gönder</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM FORM POPUP -->
+  <div class="popup-overlay" id="contact-popup" onclick="this.classList.remove('active')">
+    <div class="popup-box popup-form" onclick="event.stopPropagation()">
+      <button class="popup-close" onclick="document.getElementById('contact-popup').classList.remove('active')">✕</button>
+      <h3>Mesaj Gönderin</h3>
+      <p>En kısa sürede size dönüş yapacağız.</p>
+      <form onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Adınız Soyadınız</label>
+            <input type="text" id="name" placeholder="Ad Soyad" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" placeholder="05XX XXX XX XX" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-posta</label>
+          <input type="email" id="email" placeholder="ornek@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="subject">Konu</label>
+          <select id="subject">
+            <option value="">Hizmet seçin...</option>
+            <option>Muhasebe & Defter Tutma</option>
+            <option>Vergi Danışmanlığı</option>
+            <option>SGK & Bordro</option>
+            <option>Şirket Kuruluşu</option>
+            <option>Mali Analiz</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Mesajınız</label>
+          <textarea id="message" rows="3" placeholder="Mesajınızı yazın..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Gönder</button>
+        <p class="form-success" id="form-success">Mesajınız alındı, en kısa sürede dönüş yapacağız!</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <!-- Kolon 1: Logo + Açıklama -->
+      <div class="footer-col">
+        <a href="#anasayfa" class="logo footer-brand">
+          <img src="logo.png" alt="Logo" class="logo-img logo-img-sm" />
+          <div class="logo-text">
+            <span class="logo-name" style="color:#fff;">Selda Erdoğan</span>
+            <span class="logo-sub" style="color:rgba(255,255,255,.5);">Mali Müşavirlik</span>
+          </div>
+        </a>
+        <p class="footer-desc">İşletmenizin mali süreçlerini güvenle yönetin. Vergi, muhasebe ve SGK konularında 15+ yıllık uzman desteği.</p>
+      </div>
+
+      <!-- Kolon 2: Site Haritası -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Site Haritası</h4>
+        <ul class="footer-links">
+          <li><a href="#anasayfa">Anasayfa</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="hizmetler/muhasebe.html">Muhasebe & Defter Tutma</a></li>
+          <li><a href="hizmetler/vergi.html">Vergi Danışmanlığı</a></li>
+          <li><a href="hizmetler/sgk.html">SGK & Bordro</a></li>
+          <li><a href="hizmetler/sirket.html">Şirket Kuruluşu</a></li>
+          <li><a href="hizmetler/analiz.html">Mali Analiz</a></li>
+          <li><a href="hizmetler/efatura.html">E-Fatura & E-Defter</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolon 3: İletişim -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">İletişim</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.23h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            +90 (5XX) XXX XX XX
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            info@seldaerdogan.com
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="rgba(255,255,255,.5)" stroke-width="2"/></svg>
+            Merkez Mah. Ergün Sk. No:1/27, Arnavutköy/İstanbul
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.5)" stroke-width="2"/><polyline points="12,6 12,12 16,14" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Pzt – Cum: 09:00 – 18:00
+          </li>
+        </ul>
+      </div>
+
+      <!-- Kolon 4: Hızlı Form -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Hızlı Mesaj</h4>
+        <form class="footer-form" onsubmit="handleFooterForm(event)">
+          <div class="footer-form-group">
+            <input type="text" placeholder="Adınız Soyadınız" required />
+          </div>
+          <div class="footer-form-group">
+            <input type="tel" placeholder="Telefon Numaranız" required />
+          </div>
+          <div class="footer-form-group">
+            <input type="email" placeholder="E-posta Adresiniz" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:4px;">Gönder</button>
+          <p class="footer-form-success" id="footer-form-success">Mesajınız alındı!</p>
+        </form>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Selda Erdoğan Mali Müşavirlik. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Sticky header shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Form
+    function handleForm(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+    }
+
+    function handleFooterForm(e) {
+      e.preventDefault();
+      document.getElementById('footer-form-success').style.display = 'block';
+      e.target.reset();
+    }
+
+    // Döviz kurları (TCMB üzerinden ExchangeRate-API)
+    async function loadRates() {
+      try {
+        const res = await fetch('https://open.er-api.com/v6/latest/TRY');
+        const data = await res.json();
+        const rates = data.rates;
+        const fmt = v => (1 / v).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        document.getElementById('usd-val').textContent = fmt(rates.USD) + ' ₺';
+        document.getElementById('eur-val').textContent = fmt(rates.EUR) + ' ₺';
+        document.getElementById('gbp-val').textContent = fmt(rates.GBP) + ' ₺';
+      } catch (e) {
+        document.getElementById('topbar-rates').style.display = 'none';
+      }
+    }
+    loadRates();
+
+    // Haberler (alomaliye.com RSS via rss2json)
+    async function loadNews() {
+      const grid = document.getElementById('news-grid');
+      const ticker = document.getElementById('ticker-text');
+      try {
+        const rssUrl = encodeURIComponent('https://www.alomaliye.com/feed/');
+        const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + rssUrl + '&count=6');
+        const data = await res.json();
+        if (!data.items || data.items.length === 0) throw new Error('no items');
+
+        // Haber kartları
+        grid.innerHTML = data.items.map(item => {
+          const date = new Date(item.pubDate).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
+          const img = item.thumbnail || item.enclosure?.link || '';
+          return `
+            <a href="${item.link}" target="_blank" rel="noopener" class="news-card">
+              ${img ? `<div class="news-img" style="background-image:url('${img}')"></div>` : '<div class="news-img news-img-placeholder"></div>'}
+              <div class="news-body">
+                <span class="news-date">${date}</span>
+                <h4>${item.title}</h4>
+              </div>
+            </a>`;
+        }).join('');
+
+        // Ticker
+        ticker.textContent = data.items.map(i => i.title).join('   •   ');
+        ticker.style.animation = 'none';
+        ticker.offsetHeight;
+        ticker.style.animation = '';
+      } catch (e) {
+        grid.innerHTML = '<p class="news-error">Haberler şu anda yüklenemiyor. Lütfen daha sonra tekrar deneyin.</p>';
+        ticker.textContent = 'Güncel mali müşavirlik haberleri için bizi takip edin.';
+      }
+    }
+    loadNews();
+  </script>
+</body>
+</html>
