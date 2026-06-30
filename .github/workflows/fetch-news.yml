@@ -1,0 +1,43 @@
+name: Haberleri Güncelle
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: RSS çek ve JSON oluştur
+        run: |
+          curl -s "https://www.alomaliye.com/feed/" -o feed.xml
+          python3 - <<'EOF'
+          import xml.etree.ElementTree as ET
+          import json, datetime
+
+          tree = ET.parse('feed.xml')
+          root = tree.getroot()
+          items = []
+          for item in root.findall('.//item')[:6]:
+              title = item.findtext('title', '').strip()
+              link  = item.findtext('link', '').strip()
+              date  = item.findtext('pubDate', '').strip()
+              enc   = item.find('enclosure')
+              img   = enc.get('url') if enc is not None else ''
+              items.append({'title': title, 'link': link, 'date': date, 'img': img})
+
+          with open('haberler.json', 'w', encoding='utf-8') as f:
+              json.dump({'updated': datetime.datetime.utcnow().isoformat(), 'items': items}, f, ensure_ascii=False)
+          print(f"{len(items)} haber kaydedildi.")
+          EOF
+
+      - name: Değişiklikleri kaydet
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add haberler.json
+          git diff --cached --quiet || git commit -m "haberler guncellendi"
+          git push
