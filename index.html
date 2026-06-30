@@ -603,32 +603,40 @@
     }
     loadRates();
 
-    // Haberler (alomaliye.com RSS via rss2json)
+    // Haberler (alomaliye.com RSS via allorigins proxy)
     async function loadNews() {
       const grid = document.getElementById('news-grid');
       const ticker = document.getElementById('ticker-text');
       try {
-        const rssUrl = encodeURIComponent('https://www.alomaliye.com/feed/');
-        const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + rssUrl + '&count=6');
+        const rssUrl = 'https://www.alomaliye.com/feed/';
+        const res = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent(rssUrl));
         const data = await res.json();
-        if (!data.items || data.items.length === 0) throw new Error('no items');
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, 'text/xml');
+        const items = Array.from(xml.querySelectorAll('item')).slice(0, 6);
+        if (items.length === 0) throw new Error('no items');
+
+        const getTag = (el, tag) => el.querySelector(tag)?.textContent?.trim() || '';
 
         // Haber kartları
-        grid.innerHTML = data.items.map(item => {
-          const date = new Date(item.pubDate).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
-          const img = item.thumbnail || item.enclosure?.link || '';
+        grid.innerHTML = items.map(item => {
+          const title = getTag(item, 'title');
+          const link = getTag(item, 'link');
+          const pubDate = getTag(item, 'pubDate');
+          const date = pubDate ? new Date(pubDate).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+          const img = item.querySelector('enclosure')?.getAttribute('url') || '';
           return `
-            <a href="${item.link}" target="_blank" rel="noopener" class="news-card">
+            <a href="${link}" target="_blank" rel="noopener" class="news-card">
               ${img ? `<div class="news-img" style="background-image:url('${img}')"></div>` : '<div class="news-img news-img-placeholder"></div>'}
               <div class="news-body">
                 <span class="news-date">${date}</span>
-                <h4>${item.title}</h4>
+                <h4>${title}</h4>
               </div>
             </a>`;
         }).join('');
 
         // Ticker
-        ticker.textContent = data.items.map(i => i.title).join('   •   ');
+        ticker.textContent = items.map(i => getTag(i, 'title')).join('   •   ');
         ticker.style.animation = 'none';
         ticker.offsetHeight;
         ticker.style.animation = '';
