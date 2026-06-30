@@ -609,10 +609,10 @@
       const ticker = document.getElementById('ticker-text');
       try {
         const rssUrl = 'https://www.alomaliye.com/feed/';
-        const res = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent(rssUrl));
-        const data = await res.json();
+        const res = await fetch('https://corsproxy.io/?' + encodeURIComponent(rssUrl));
+        const text = await res.text();
         const parser = new DOMParser();
-        const xml = parser.parseFromString(data.contents, 'text/xml');
+        const xml = parser.parseFromString(text, 'text/xml');
         const items = Array.from(xml.querySelectorAll('item')).slice(0, 6);
         if (items.length === 0) throw new Error('no items');
 
