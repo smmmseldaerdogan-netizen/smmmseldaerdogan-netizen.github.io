@@ -274,6 +274,27 @@ img { max-width: 100%; display: block; }
   border-color: rgba(255,255,255,0.6);
   transform: translateY(-2px);
 }
+.hero-link-edevlet {
+  background: #E30613;
+  border-color: #E30613;
+  gap: 12px;
+}
+.hero-link-edevlet:hover {
+  background: #c0000f;
+  border-color: #c0000f;
+}
+.hero-link-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero-link-sub {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
 .hero-badge {
   display: inline-block;
   background: rgba(240,165,0,.2);
