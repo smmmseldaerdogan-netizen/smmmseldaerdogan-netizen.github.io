@@ -275,13 +275,13 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 .hero-link-edevlet {
-  background: #E30613;
-  border-color: #E30613;
+  background: #b00010;
+  border-color: #b00010;
   gap: 12px;
 }
 .hero-link-edevlet:hover {
-  background: #c0000f;
-  border-color: #c0000f;
+  background: #8e000d;
+  border-color: #8e000d;
 }
 .hero-link-label {
   display: block;
