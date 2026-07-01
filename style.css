@@ -295,6 +295,25 @@ img { max-width: 100%; display: block; }
   font-weight: 400;
   opacity: 0.85;
 }
+.edevlet-emblem {
+  flex-shrink: 0;
+}
+.edevlet-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: #fff;
+}
+.edevlet-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.edevlet-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
 .hero-badge {
   display: inline-block;
   background: rgba(240,165,0,.2);
