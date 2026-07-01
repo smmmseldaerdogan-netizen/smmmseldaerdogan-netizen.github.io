@@ -305,6 +305,24 @@ img { max-width: 100%; display: block; }
   font-weight: 400;
   opacity: 0.85;
 }
+.kvkk-group { margin-top: 4px; }
+.kvkk-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+}
+.kvkk-label input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--navy);
+}
 .edevlet-emblem {
   flex-shrink: 0;
 }
