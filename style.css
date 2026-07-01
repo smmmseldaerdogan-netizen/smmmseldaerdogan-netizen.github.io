@@ -284,6 +284,15 @@ img { max-width: 100%; display: block; }
   background: #f0f0f0;
   border-color: #f0f0f0;
 }
+.hero-link-ivd {
+  background: #fff;
+  border-color: #fff;
+  color: #1a3a5c;
+}
+.hero-link-ivd:hover {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+}
 .hero-link-label {
   display: block;
   font-size: 1rem;
