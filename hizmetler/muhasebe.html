@@ -127,15 +127,70 @@
   </section>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <img src="../logo.png" alt="Selda Erdoğan Mali Müşavirlik Logo" class="logo-img" />
-        <div class="logo-text">
-          <span class="logo-name">Selda Erdoğan</span>
-          <span class="logo-sub">Mali Müşavirlik</span>
-        </div>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="../index.html#anasayfa" class="logo footer-brand">
+          <img src="../logo.png" alt="Logo" class="logo-img logo-img-sm" />
+          <div class="logo-text">
+            <span class="logo-name" style="color:#fff;">Selda Erdoğan</span>
+            <span class="logo-sub" style="color:rgba(255,255,255,.5);">Mali Müşavirlik</span>
+          </div>
+        </a>
+        <p class="footer-desc">İşletmenizin mali süreçlerini güvenle yönetin. Vergi, muhasebe ve SGK konularında 15+ yıllık uzman desteği.</p>
       </div>
-      <p class="footer-copy">© 2024 Selda Erdoğan Mali Müşavirlik. Tüm hakları saklıdır.</p>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Site Haritası</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html#anasayfa">Anasayfa</a></li>
+          <li><a href="../index.html#hakkimizda">Hakkımızda</a></li>
+          <li><a href="muhasebe.html">Muhasebe & Defter Tutma</a></li>
+          <li><a href="vergi.html">Vergi Danışmanlığı</a></li>
+          <li><a href="sgk.html">SGK & Bordro</a></li>
+          <li><a href="sirket.html">Şirket Kuruluşu</a></li>
+          <li><a href="analiz.html">Mali Analiz</a></li>
+          <li><a href="efatura.html">E-Fatura & E-Defter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">İletişim</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.23h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            +90 (554) 730 20 09
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            smmmseldaerdogan@gmail.com
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="rgba(255,255,255,.5)" stroke-width="2"/></svg>
+            Merkez Mah. Ergün Sk. No:1/27, Arnavutköy/İstanbul
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.5)" stroke-width="2"/><polyline points="12,6 12,12 16,14" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Pzt – Cum: 09:00 – 18:00
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Hızlı Mesaj</h4>
+        <form class="footer-form" action="https://formspree.io/f/mwvdnvgb" method="POST" onsubmit="handleFooterForm(event)">
+          <div class="footer-form-group">
+            <input type="text" name="name" placeholder="Adınız Soyadınız" required />
+          </div>
+          <div class="footer-form-group">
+            <input type="tel" name="phone" placeholder="Telefon Numaranız" required />
+          </div>
+          <div class="footer-form-group">
+            <input type="email" name="email" placeholder="E-posta Adresiniz" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:4px;">Gönder</button>
+          <p class="footer-form-success" id="footer-form-success">Mesajınız alındı!</p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Selda Erdoğan Mali Müşavirlik. Tüm hakları saklıdır.</p>
     </div>
   </footer>
 
@@ -144,6 +199,18 @@
     const nav = document.getElementById('nav');
     hamburger.addEventListener('click', () => { nav.classList.toggle('open'); hamburger.classList.toggle('active'); });
     window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20); });
+    async function handleFooterForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type=submit]');
+      btn.disabled = true; btn.textContent = 'Gönderiliyor...';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (res.ok) { document.getElementById('footer-form-success').style.display = 'block'; form.reset(); }
+        else { alert('Bir hata oluştu, lütfen tekrar deneyin.'); }
+      } catch { alert('Bağlantı hatası, lütfen tekrar deneyin.'); }
+      btn.disabled = false; btn.textContent = 'Gönder';
+    }
   </script>
 </body>
 </html>
